@@ -30,9 +30,9 @@ const searchMatrix = function(matrix, target) {
 
   if (rowTop > rowBottom) return false;
   const midRow = Math.floor((rowTop + rowBottom) / 2);
+
   let l = 0,
     r = matrix[midRow].length - 1;
-
   while (l <= r) {
     let mid = Math.floor((l + r) / 2);
     if (target > matrix[midRow][mid]) {
