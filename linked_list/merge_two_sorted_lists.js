@@ -1,3 +1,13 @@
+
+
+class ListNode {
+  constructor(val, next) {
+    this.val = (val === undefined ? 0 : val);
+    this.next = (next === undefined ? null : next);
+  }
+}
+
+
 const mergeTwoLists = function(list1, list2) {
   let startNode = new ListNode(),
     dummy = startNode;
