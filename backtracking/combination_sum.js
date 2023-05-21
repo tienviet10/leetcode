@@ -31,7 +31,7 @@ const combinationSum = function(candidates, target) {
     }
 
     curr.push(candidates[index]);
-    dfs(index + 1, sum + candidates[index]);
+    dfs(index, sum + candidates[index]);
     curr.pop();
     dfs(index + 1, sum);
   };
