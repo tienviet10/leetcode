@@ -5,7 +5,7 @@
 // ? Truthy && Falsy
 
 // * Using &&
-// console.log(0 && 1);  // print 0
+// console.log(0 && 'Absolutely Amazing!');  // print 0
 // console.log('' && 'Hi');  // print '' (empty string)
 
 // * When checking hashMap -> to avoid:
@@ -190,4 +190,7 @@
 //   return debouncedValue;
 // }
 
+
+// -------------------------------------------------------------------------------------
+// ?
 
