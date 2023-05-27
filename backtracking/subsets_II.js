@@ -16,7 +16,7 @@ const subsetsWithDup = function(nums) {
   nums.sort();
 
   const backtrack = (i, curr) => {
-    if (i === nums.length) {
+    if (i >= nums.length) {
       res.push(curr.slice());
       return;
     }
