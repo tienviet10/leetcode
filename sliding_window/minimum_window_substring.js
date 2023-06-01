@@ -32,7 +32,7 @@ const minWindow = function(s, t) {
     const char = s[r];
     window[char] = (window[char] || 0) + 1;
 
-    if (char in countT && countT[char] >= window[char]) have++;
+    if (char in countT && countT[char] === window[char]) have++;
 
     while (have === need) {
       if (r - l + 1 < resLen) {
@@ -45,4 +45,6 @@ const minWindow = function(s, t) {
       l++;
     }
   }
+
+  return resLen === Infinity ? '' : s.slice(res[0], res[1] + 1);
 };
