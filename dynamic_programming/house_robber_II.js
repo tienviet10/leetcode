@@ -10,6 +10,7 @@
 // Explanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2), because they are adjacent houses.
 
 const rob = function(nums) {
+  if (nums.length === 1) return nums[0];
 
   const robHelper = (nums) => {
     const dp = new Array(nums.length + 1).fill(0);
