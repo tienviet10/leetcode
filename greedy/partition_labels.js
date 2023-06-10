@@ -29,7 +29,7 @@ const partitionLabels = function(s) {
     size++;
     end = Math.max(end, hashMap[s[i]]);
     if (i === end) {
-      res.push(end - size + 1);
+      res.push(size);
       size = 0;
     }
   }
