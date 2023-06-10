@@ -17,5 +17,18 @@
 
 
 const mergeTriplets = function(triplets, target) {
+  const good = new Set();
 
+  for (const [x, y, z] of triplets) {
+    if (x > target[0] || y > target[1] || z > target[2]) {
+      continue;
+    }
+
+    for (const index in target) {
+      if (target[index] === [x, y, z][index]) {
+        good.add(index);
+      }
+    }
+  }
+  return good.size === 3;
 };
