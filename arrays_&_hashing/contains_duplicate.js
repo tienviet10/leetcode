@@ -15,5 +15,6 @@ const containsDuplicate = function(nums) {
       placeholder.add(num);
     }
   }
+
   return false;
 };
