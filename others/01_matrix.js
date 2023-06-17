@@ -10,8 +10,8 @@
 
 
 const updateMatrix = function(mat) {
-  let stack = [];
-  let count = 1;
+  let stack = [],
+    count = 1;
 
   for (let row = 0; row < mat.length; row++) {
     for (let col = 0; col < mat[0].length; col++) {
