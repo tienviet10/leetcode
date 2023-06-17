@@ -9,11 +9,20 @@
 // Explanation: The subarray [4,-1,2,1] has the largest sum 6.
 
 const maxSubArray = function(nums) {
+  // ? Method 1
+  // let max = nums[0];
+  // let sum = 0;
+  // for (let i = 0; i < nums.length; i++) {
+  //   sum = Math.max(nums[i], sum + nums[i]);
+  //   max = Math.max(max, sum);
+  // }
+  // return max;
+
+  // ? Method 2
   let max = nums[0];
-  let sum = 0;
-  for (let i = 0; i < nums.length; i++) {
-    sum = Math.max(nums[i], sum + nums[i]);
-    max = Math.max(max, sum);
+  for (let i = 1; i < nums.length; i++) {
+    nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
+    max = Math.max(max, nums[i]);
   }
   return max;
 };
