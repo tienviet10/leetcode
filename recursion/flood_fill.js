@@ -20,7 +20,7 @@ const floodFill = function(image, sr, sc, color) {
 
   const dfs = (r, c) => {
     if (r < 0 || r >= image.length || c < 0 || c >= image[0].length || image[r][c] !== initial || visit.has(r + '-' + c)) return;
-    if (image[r][c] === initial) image[r][c] = color;
+    image[r][c] = color;
     visit.add(r + '-' + c);
     dfs(r + 1, c);
     dfs(r - 1, c);
